@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px');
+* {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+	height:100%;
+	background:#FFF;
+	text-align:center;
+	font-family:1.20em/1 'AvenirLTStd-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.43;
+	color: #333;
+	font-size: 1.3em;
+	font-height: 17px;
+	text-align: center;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* Header */
+.wrapper{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas:
+	"header" 
+	"nav" 
+	"content" 
+	"ad" 
+	"footer";
+	background-color: #FFF;
+	color: #000;
+	padding: 2%;
+	margin: 30px;
+}
+
+.main-head {
+	grid-area: header;
+	padding: 2%;
+	font: 1.5em/1 'Slabo27px', sans-serif;
+	font-size: 1em;
+	font-weight: 900;
+}
+
+.main-nav {
+	grid-area: nav;
+	padding: 1%;
+	font: 1em/1 'OpenSans', sans-serif;
+	border-top: 1px #e6e6e6 solid;
+	border-bottom: 1px #e6e6e6 solid;
+	margin-bottom: 20px;
+
+}
+
+.main-nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1%;
+	list-style-type: none;
+}
+
+.main-nav ul li a {
+	text-decoration: none;
+	font-size: 0.5em;
+	text-transform: uppercase;
+	color: #505050;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+	color: #DCDCDC;
+}
+
+
+/* About Me */
+
+article .content .aboutMe {
+	grid-area: content;
+	grid-gap: 1em;
+}
+
+.content .aboutMe h3 {
+	color: #181818;
+	font-size: 1.2em;
+}
+
+
+.content .aboutMe p {
+	margin: 5% 20% 0 20%;
+	font-size: 0.7em;
+	font-weight: 200;
+	font-weight: 200;
+	text-align: center;
+	color: #585858;
+	font-family: 'OpenSans', sans-serif;
+
+}
+
+.content .aboutMe .image {
+	margin: 2%;
+	position: relative;
+	z-index: 1;
+	backface-visibility: hidden
+	vertical-align: middle;
+	border: 0;
+	width: 100%;
+	max-width: 100%
+	height: auto;
+	border:0;
+}
+
+
+/* Participations */
+
+article .content .participations {
+	grid-area: content;
+	grid-gap: 1em;
+}
+
+.content .participations h3 {
+	color: #181818;
+	font-size: 1.2em;
+}
+
+
+.content .participations p {
+	margin: 3%;
+	font-size: 0.7em;
+	font-weight: 200;
+	font-weight: 200;
+	text-align: center;
+	color: #585858;
+	font-family: 'OpenSans', sans-serif;
+
+}
+
+.content .participations .container {
+	position: relative;
+	width: 100%;
+}
+
+.content .participations .image {
+	position: relative;
+	z-index: 1;
+	backface-visibility: hidden
+	vertical-align: middle;
+	border: 0;
+	width: 100%;
+	max-width: 100%
+	height: auto;
+	border:0;
+	opacity: 1;
+	transition: 0.5s ease;
+	backface-visibility: hidden;
+}
+
+.content .participations .image .middle {
+	transition: 0.5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.content .participations .image .middle .text {
+	background-color: #A9A9A9;
+	color:#fff;
+	padding: 2%;
+}
+
+.content .participations .container:hover .image {
+	opacity: 0.3;
+}
+
+.content .participations .container:hover .middle {
+	opacity: 1;
+	cursor: pointer;
+
+}
+
+/* Fun section */
+
+article .content .fun {
+	grid-area: content;
+	grid-gap: 1em;
+}
+
+.content .fun h3 {
+	color: #181818;
+	font-size: 1.2em;
+}
+
+
+.content .fun p {
+	margin: 3%;
+	font-size: 0.7em;
+	font-weight: 200;
+	font-weight: 200;
+	text-align: center;
+	color: #585858;
+	font-family: 'OpenSans', sans-serif;
+
+}
+
+.content .fun .image {
+	position: relative;
+	z-index: 1;
+	backface-visibility: hidden
+	vertical-align: middle;
+	border: 0;
+	width: 100%;
+	max-width: 100%
+	height: auto;
+	border:0;
+}
+
+
+/* Contact info */
+
+.ad {
+	margin: 0;
+	grid-area: ad;
+}
+
+.ad h3 {
+	font-size: 1em;
+	color: #181818;
+}
+
+.ad p {
+	margin: 5% 20% 0 20%;
+	font-size: 0.6em;
+	font-weight: 200;
+	font-weight: 200;
+	text-align: center;
+	color: #585858;
+	font-family: 'OpenSans', sans-serif;
+	list-style: none;
+}
+
+.ad p a {
+	text-decoration: none;
+	color: #303030;
+}
+
+.ad p a:hover,
+.ad p a:focus {
+	color: #C0C0C0;
+	cursor: pointer;
+}
+
+.social {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	list-style: none;
+	padding: 5%;
+}
+
+.social ul {
+	margin: 5%;
+	padding: 0;
+}
+
+.social li a {
+	color: #707070;
+}
+
+.social li a:hover,
+.social li a:focus {
+	color: #DCDCDC;
+	cursor: pointer;
+}
+
+.footer {
+	background-color: #DCDCDC;
+	color: #696969;
+	margin: 0;
+	padding: 2%;
+}
+
+.footer p {
+	font-size:0.4em;
+}
+
