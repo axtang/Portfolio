@@ -173,6 +173,7 @@ article .content .participations {
 	background-color: #282828;
 	color: #fff;
 	padding: 2%;
+	z-index: 100;
 }
 
 .container:hover .image {
