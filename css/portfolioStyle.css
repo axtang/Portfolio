@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px');
+a@import url('https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px');
+
 * {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
 
 html, body {
-	height:100%;
-	background:#FFF;
-	text-align:center;
-	font-family:1.20em/1 'AvenirLTStd-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	height: 100%;
+	background: #fff;
+	text-align: center;
+	font-family: 'AvenirLTStd-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
+	font-size: 1.3em;
 	font-weight: 400;
 	line-height: 1.43;
 	color: #333;
-	font-size: 1.3em;
-	font-height: 17px;
 	text-align: center;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -31,10 +31,10 @@ html, body {
 	"content" 
 	"ad" 
 	"footer";
-	background-color: #FFF;
+	background-color: #fff;
 	color: #000;
 	padding: 2%;
-	margin: 30px;
+	margin: 30px auto;
 }
 
 .main-head {
@@ -63,7 +63,7 @@ html, body {
 	list-style-type: none;
 }
 
-.main-nav ul li a {
+.main-nav a {
 	text-decoration: none;
 	font-size: 0.5em;
 	text-transform: uppercase;
@@ -75,6 +75,40 @@ html, body {
 	color: #DCDCDC;
 }
 
+/* Responsive drop down nav button */
+
+.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.main-nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav .main-nav a:not(:first-child) {display: none;}
+  nav .main-nav a.icon {
+    float: right;
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav .main-nav.responsive {position: relative;}
+  nav .main-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav .main-nav.responsive a {
+    float: none;
+    display: grid;
+    text-align: center;
+  }
+}
+
 
 /* About Me */
 
@@ -83,13 +117,13 @@ article .content .aboutMe {
 	grid-gap: 1em;
 }
 
-.content .aboutMe h3 {
+.aboutMe_heading {
 	color: #181818;
 	font-size: 1.2em;
 }
 
 
-.content .aboutMe p {
+.aboutMe p {
 	margin: 5% 20% 0 20%;
 	font-size: 0.7em;
 	font-weight: 200;
@@ -121,7 +155,7 @@ article .content .participations {
 	grid-gap: 1em;
 }
 
-.content .participations h3 {
+.participations_heading {
 	color: #181818;
 	font-size: 1.2em;
 }
@@ -193,7 +227,7 @@ article .content .fun {
 	grid-gap: 1em;
 }
 
-.content .fun h3 {
+.fun_heading {
 	color: #181818;
 	font-size: 1.2em;
 }
@@ -230,7 +264,7 @@ article .content .fun {
 	grid-area: ad;
 }
 
-.ad h3 {
+.ad_heading {
 	font-size: 1em;
 	color: #181818;
 }
@@ -291,3 +325,17 @@ article .content .fun {
 	font-size:0.4em;
 }
 
+/* Media query for nav bar */
+@media screen and (max-width: 600px) {
+	.main-nav a:not(:first-child) {display: none;}
+	.main-nav a.icon {
+		float: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.main-nav .responsive {
+		position: relative;
+		text-align: left;
+	}
+}
