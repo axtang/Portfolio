@@ -2,48 +2,40 @@
 <html>
 <head>
 	<title>Portfolio</title>
-	<meta name="description" content="A portfolio of Annabelle Tang, who is a web developer with a passion in healthcare."
-	<meta http-equiv="content-Type" content="text/html"; charset="UTF-8" />
-	<meta http-equiv="Content-Type" content="text/html"; charset=ISO-8859-1>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" href="css/portfolioStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/portfolioStyle.css">
 	<link rel="stylesheet" href="css/portfolioNav.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 </head>
-
-
 <body>
 	<div class="wrapper">
 		<header class="main-head">Annabelle Tang</header>
 		<nav class="main-nav">
 			<ul>
-				<li><a href="index.html" class="active">About Me</a></li>
+				<li><a href="index.html">About Me</a></li>
 				<li><a href="participations.html">Participations</a></li>
 				<li><a href="projects.html">Projects</a></li>
 				<li><a href="fun.html">Fun</a></li>
 				<li><a href="messageMe.html">Message Me</a></li>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 			</ul>
 		</nav>
+	
 
-		<!-- About-Me section -->
+		<!-- Fun section -->
 		<article class="content">
-			<div class="aboutMe">
-				<h3>From lab benchs to text editors</h3>
-				<br>
-				<img src="img/myself.jpg">
-
-				<p>Prior to learning about web development, I graduated with a major in biology in 2016 and worked in leading liquid biopsy laboratories for the prenatal and cancer fields.
-				<p>While working as a Research Associate in 2017, I was introduced to the concept of improving healthcare quality through web development and I immediately jumped into this movement.</p>
-				<p>In addition to participating in numerous hackathons to understand code writing and to contribute in the development of products, I have since signed up for a Udacity Nanodegree for Full Stack Web Developer and volunteered as part of the Silicon Valley Artificial Intelligence core team, a non-profit organization that promotes artificial intelligence in healthcare.</p>
-				<p>I am available for a full-time role in web development.</p>
+			<div class="fun">
+				<h3>From land to ocean</h3>
+				<p>I love all kind of outdoor activities. </p>
+				<img src="img/skydiving1.jpg" class="image">
+				<img src="img/sailing.jpg" class="image">
+				<img src="img/hiking1.jpg" class="image">
+				<img src="img/hiking2.jpg" class="image">
 			</div>
 		</article>
-		<!-- End of about-Me section -->
 	</div>
 	<!-- End of wrapper -->
-
 
 	<!-- Contact me section -->
 	<div class="container" >
@@ -66,15 +58,5 @@
 	</div>
 	<!-- End of footer -->
 
-	<script>
-		function myFunction() {
-		    var x = document.getElementById("myTopnav");
-		    if (x.className === "topnav") {
-		        x.className += " responsive";
-		    } else {
-		        x.className = "topnav";
-		    }
-		}
-	</script>
 </body>
 </html>
