@@ -1,4 +1,6 @@
-a@import url('https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px');
+
+/* Responsive media queries */
 
 * {
 	margin: 0;
@@ -70,43 +72,47 @@ html, body {
 	color: #505050;
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
+#menu a:hover,
+#menu a:focus {
 	color: #DCDCDC;
+	cursor: pointer;
 }
 
-/* Responsive drop down nav button */
+/* Hide checkbox */
 
-.active {
-  background-color: #fff;
-  color: #000;
+input[type=checkbox] {
+	display: none;
 }
 
-.main-nav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  nav .main-nav a:not(:first-child) {display: none;}
-  nav .main-nav a.icon {
-    float: right;
-    display: grid;
-    grid-template-rows: 1fr;
-  }
+/* Menu will pop up when invisible checkbox is checked */
+input[type=checkbox]:checked~#menu {
+	display: grid;
 }
 
 @media screen and (max-width: 600px) {
-  nav .main-nav.responsive {position: relative;}
-  nav .main-nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  nav .main-nav.responsive a {
-    float: none;
-    display: grid;
-    text-align: center;
-  }
+	.main-nav ul {
+		display: none;
+	}
+	.main-nav li {
+		display: grid;
+		grid-auto-flow: row;
+		position: static;
+		text-align: center;
+		margin: 0;
+		padding: 1%;
+	}
+	label .show-menu {
+		display: grid;
+		padding: 1%;
+		background-color: #F5F5F5;
+		color: #282828;
+	}
+
+	label .show-menu:hover,
+	label .show-menu {
+		color: #F0F0F0;
+		cursor: pointer;
+	}
 }
 
 
@@ -323,19 +329,4 @@ article .content .fun {
 
 .footer p {
 	font-size:0.4em;
-}
-
-/* Media query for nav bar */
-@media screen and (max-width: 600px) {
-	.main-nav a:not(:first-child) {display: none;}
-	.main-nav a.icon {
-		float: center;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.main-nav .responsive {
-		position: relative;
-		text-align: left;
-	}
 }
