@@ -17,14 +17,17 @@
 	<div class="wrapper">
 		<header class="main-head">Annabelle Tang</header>
 		<nav class="main-nav">
-			<ul>
-				<li><a href="index.html" class="active">About Me</a></li>
-				<li><a href="participations.html">Participations</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="fun.html">Fun</a></li>
-				<li><a href="messageMe.html">Message Me</a></li>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-			</ul>
+			<div class="topnav" id="site-top">
+				<label for="show-menu" class="show-menu">Menu</label>
+				<input type="checkbox" id="show-menu" role="button">
+				<ul id="menu">
+					<li><a href="index.html" class="active">About Me</a></li>
+					<li><a href="participations.html">Participations</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="fun.html">Fun</a></li>
+					<li><a href="messageMe.html">Message Me</a></li>
+				</ul>
+			</div>
 		</nav>
 
 		<!-- About-Me section -->
@@ -34,10 +37,17 @@
 				<br>
 				<img src="img/myself.jpg">
 
-				<p>Prior to learning about web development, I graduated with a major in biology in 2016 and worked in leading liquid biopsy laboratories for the prenatal and cancer fields.
-				<p>While working as a Research Associate in 2017, I was introduced to the concept of improving healthcare quality through web development and I immediately jumped into this movement.</p>
-				<p>In addition to participating in numerous hackathons to understand code writing and to contribute in the development of products, I have since signed up for a Udacity Nanodegree for Full Stack Web Developer and volunteered as part of the Silicon Valley Artificial Intelligence core team, a non-profit organization that promotes artificial intelligence in healthcare.</p>
-				<p>I am available for a full-time role in web development.</p>
+				<p>I graduated with a biology major in 2016 and have worked in two leading liquid biopsy laboratories for the prenatal and cancer fields.</p>
+
+				<p>From these two laboratories, I gained wet lab experiences, such as isolating and extracting DNAs (cell-free tumor, genomic, and prenatal cell-free DNA), preparing reagent for TECAN, Hamilton Star, HiSeq2500, and etc. Through processing samples, I assisted GH automation team with automation development testing and R&D team with early-stage cancer detection test development.</p>
+
+				<p>Some dry lab experiences I've gained include using LIMS to manage patient records, and creating and managing sample databases and trackers. I've also coordinated collaborations with different teams, pharmaceutical companies, and hospital personelles to ensure all processes go through smoothly.</p>
+
+				<p>While working as a Research Associate in 2017, I was introduced to the concept of improving healthcare quality through web development by Thuy Truong. I immediately jumped into this movement by signing up for the nearest hackathon.</p>
+
+				<p>In addition to participating in numerous hackathons to understand code writing and to contribute in the development of products, I have since completed a data analysis with Python course on Udemy and html and css course on CodeAcademy, signed up for a Udacity Nanodegree for Full Stack Web Developer and volunteered as part of the Silicon Valley Artificial Intelligence core team, a non-profit organization that promotes artificial intelligence in healthcare, where I edit and manage the organization's website and analyze monthly membership data.</p>
+
+				<p>Please contact me for full-time web development opportunities. You can find my contact information below.</p>
 			</div>
 		</article>
 		<!-- End of about-Me section -->
@@ -65,16 +75,5 @@
 			<p>&copy; Annabelle Tang</p>
 	</div>
 	<!-- End of footer -->
-
-	<script>
-		function myFunction() {
-		    var x = document.getElementById("myTopnav");
-		    if (x.className === "topnav") {
-		        x.className += " responsive";
-		    } else {
-		        x.className = "topnav";
-		    }
-		}
-	</script>
 </body>
 </html>
