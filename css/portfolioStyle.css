@@ -57,7 +57,7 @@ html, body {
 
 }
 
-.main-nav ul {
+ul #menu{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -70,6 +70,13 @@ html, body {
 	font-size: 0.5em;
 	text-transform: uppercase;
 	color: #505050;
+}
+
+.show-menu {
+	margin: 0;
+	padding: 1%;
+	width: 100%;
+	display: none;
 }
 
 #menu a:hover,
@@ -94,23 +101,19 @@ input[type=checkbox]:checked~#menu {
 		display: none;
 	}
 	.main-nav li {
-		display: grid;
-		grid-auto-flow: row;
-		position: static;
-		text-align: center;
+		position: relative;
 		margin: 0;
 		padding: 1%;
 	}
-	label .show-menu {
+	.show-menu {
 		display: grid;
 		padding: 1%;
 		background-color: #F5F5F5;
-		color: #282828;
+		color: #F5F5F5;
 	}
-
-	label .show-menu:hover,
-	label .show-menu {
-		color: #F0F0F0;
+	.show-menu:hover,
+	.show-menu {
+		color: #404040;
 		cursor: pointer;
 	}
 }
