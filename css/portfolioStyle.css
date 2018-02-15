@@ -47,37 +47,49 @@ html, body {
 	font-weight: 900;
 }
 
+/* Navbar */
+
 .main-nav {
-	grid-area: nav;
+	margin: 0;
 	padding: 1%;
+	grid-area: nav;
 	font: 1em/1 'OpenSans', sans-serif;
 	border-top: 1px #e6e6e6 solid;
 	border-bottom: 1px #e6e6e6 solid;
 	margin-bottom: 20px;
-
 }
 
-.main-nav ul{
+.show-menu {
+	display: none;
+	margin: 0;
+	padding: 2%;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+}
+
+.topnav ul{
 	display: flex;
 	flex-direction: row;
+	vertical-align: center;
 	justify-content: space-between;
-	padding: 1%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 	list-style-type: none;
 }
 
-.main-nav a {
-	list-style: none;
-	text-decoration: none;
+.topnav li {
+	width: 100%;
+	padding: 1%;
 	font-size: 0.5em;
 	text-transform: uppercase;
 	color: #505050;
 }
 
-.show-menu {
-	margin: 0;
-	padding: 1%;
+.topnav a {
 	width: 100%;
-	display: none;
+	text-decoration: none;
 }
 
 #menu a:hover,
@@ -97,27 +109,34 @@ input[type=checkbox]:checked~#menu {
 	display: grid;
 }
 
-@media screen (min-width: 0px) and (max-width: 600px) {
-	.main-nav ul {
+@media screen and (max-width: 600px) {
+	.topnav ul {
 		display: none;
 	}
-	.main-nav li {
-		display: flex;
-		flex-direction: row;
+
+	.topnav li {
+		display: grid;
+		grid-template-rows: 1fr;
 		justify-content: space-between;
 		padding: 2%;
 		list-style-type: none;
-		position: relative;
 		margin: 0;
+		width: 100%;
+		text-align: center;
 	}
+	
 	.show-menu {
 		display: grid;
 		padding: 1%;
 		background-color: #F5F5F5;
 		color: #F5F5F5;
+		width: 100%;
 	}
-	.show-menu:hover,
-	.show-menu {
+
+
+
+	.topnav .show-menu:hover,
+	.topnav .show-menu {
 		color: #404040;
 		cursor: pointer;
 	}
